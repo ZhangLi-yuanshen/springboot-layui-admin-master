@@ -40,7 +40,7 @@ public class RedirectController {
         List<Department> departmentList = departmentService.listAll();
         model.addAttribute("positionList", positionList);
         model.addAttribute("departmentList", departmentList);
-        return "employee_view";
+        return "employee_view.html";
     }
 
     @GetMapping("/layers/employee/insert")
@@ -63,18 +63,18 @@ public class RedirectController {
     public String toDownload(Model model) {
         UserAuth user = UserContext.getCurrentUser();
         model.addAttribute("user", user);
-        return "download_view";
+        return "download_view.html";
     }
 
     @GetMapping("/department")
     public String toDepartment() {
-        return "department_view";
+        return "department_view.html";
     }
 
 
     @GetMapping("/auth")
     public String toAuth() {
-        return "auth_view";
+        return "auth_view.html";
     }
 
     @GetMapping("/position")
